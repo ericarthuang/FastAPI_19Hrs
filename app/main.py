@@ -31,7 +31,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to My FastApi!"}
+    return {"message": "Welcome to My FastApi on Heroku!"}
 
 
 
