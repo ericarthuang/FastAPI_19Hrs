@@ -43,7 +43,7 @@ class Post(PostBase):
         orm_mode = True
         
         
-class PostOut(PostBase):
+class PostOut(BaseModel):
     Post: Post
     votes: int
     

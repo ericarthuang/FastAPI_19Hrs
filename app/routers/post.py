@@ -13,8 +13,8 @@ router = APIRouter(
 
 
 #@router.get("/", response_model=List[schemas.Post])
-#@router.get("/", response_model=List[schemas.PostOut])
-@router.get("/")
+@router.get("/", response_model=List[schemas.PostOut])
+#@router.get("/")
 def get_posts(db: Session=Depends(get_db), 
               current_user: int = Depends(oauth2.get_current_user),
               limit: int = 10,
@@ -53,8 +53,8 @@ def create_posts(post: schemas.PostCreate,
 
 
 #@router.get("/{id}", response_model=schemas.Post)
-#@router.get("/{id}", response_model=schemas.PostOut)
-@router.get("/{id}")
+@router.get("/{id}", response_model=schemas.PostOut)
+#@router.get("/{id}")
 def get_post(id: int, 
             db: Session=Depends(get_db), 
             current_user: int = Depends(oauth2.get_current_user)):
