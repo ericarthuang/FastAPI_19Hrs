@@ -46,7 +46,7 @@ jobs:
 
       - name: install all dependencies
         run: pip install -r requirements.txt
-        
+
       - name: test with pytest
         run: |
           pip install pytest
@@ -87,7 +87,7 @@ jobs:
 
     steps:
       - name: pulling git repo
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
 
       - name: deploying to huroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
