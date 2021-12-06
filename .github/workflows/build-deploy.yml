@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 jobs:
   job1:
+    # github seeting - environment
     environment:
       name: testing
     env:
